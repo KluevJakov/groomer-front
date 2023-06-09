@@ -1,0 +1,10 @@
+<div class="container w-25 mt-5 d-flex flex-column justify-content-center">
+    <form class="w-100">
+        <label for="email">Email: </label>
+        <input class="form-control mb-2" type="email" placeholder="Email" id="email" name="email" [(ngModel)]="user.email">
+        <label for="password">Пароль: </label>
+        <input class="form-control mb-3" type="password" placeholder="Пароль" id="password" name="password" [(ngModel)]="user.password">
+        <button type="button" class="menubtn btn btn-secondary mb-3 w-100" (click)="login()">Войти</button>
+    </form>
+    <p style="text-align: center;">Или <a class="link" (click)="register()">зарегистрируйтесь</a>, если ещё нет аккаунта.</p>
+</div>

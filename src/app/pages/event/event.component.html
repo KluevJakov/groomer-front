@@ -1,0 +1,18 @@
+<div class="modal-header">
+    <h4 class="modal-title">Запись на сеанс</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <p>День сеанса: {{ dateOfEvent }}</p>
+    <p>Начало сеанса (Сеанс длится ~2 часа):
+      <ngb-timepicker id="tp1" [(ngModel)]="startTime" [meridian]="false" [spinners]="true" 
+      [minuteStep]="30" [hourStep]="1" (ngModelChange)="validateDates()"></ngb-timepicker>
+    </p>
+    <p>Порода собаки: <input type="text" class="form-control" id="textEvent" minlength="1" maxlength="100" required></p>
+    <p>Дополнительные пожелания: </p>
+    <textarea id="textDescription" class="form-control" minlength="1" maxlength="2000" style="width: 100%; margin-bottom: 20px"></textarea>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="createEvent()">Записаться</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Закрыть</button>
+</div>

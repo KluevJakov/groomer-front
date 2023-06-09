@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title">Сеанс</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <p>День сеанса: {{ dateOfEvent }}</p>
+    <p>Начало сеанса (Сеанс длится ~2 часа):
+      <ngb-timepicker id="tp1" [(ngModel)]="startDate" [meridian]="false" [spinners]="true" 
+      [minuteStep]="30" [hourStep]="1" [disabled]="user.roles[0].id == 2" (ngModelChange)="validateDates()"></ngb-timepicker>
+    </p>
+    <p>
+        Дата сеанса:
+        <input *ngIf="user.roles[0].id == 1" type="date" [(ngModel)]="dateOfEventDate" class="form-control"/>
+    </p>
+    <p>Порода собаки: {{ event.title }}</p>
+    <p>Дополнительные пожелания:  {{ event.additional }}</p>
+    <p *ngIf="user.roles[0].id == 1" class="mt-3">Клиент: {{event.client.name + " " + event.client.phone + " " + event.client.email}}</p>
+    <p *ngIf="user.roles[0].id == 1" class="mt-3">Назначить мастера: <input type="text" [(ngModel)]="event.master" class="form-control" id="textEvent" minlength="1" maxlength="100" required></p>
+</div>
+<div class="modal-footer">
+    <button *ngIf="user.roles[0].id == 1" type="button" class="btn btn-success" (click)="update()">Назначить мастера</button>
+    <button type="button" class="btn btn-danger" (click)="cancel()">Отменить</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('Close click')">Закрыть</button>
+</div>

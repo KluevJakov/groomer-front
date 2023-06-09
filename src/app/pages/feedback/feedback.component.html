@@ -1,0 +1,17 @@
+<div class="container h-100 d-flex flex-column w-50">
+    <div *ngIf="user && user.roles[0].id == 2">
+        <textarea id="textDescription" class="form-control" [(ngModel)]="feedback.text" placeholder="Ваш отзыв.." minlength="1" maxlength="2000" style="width: 100%; margin-bottom: 20px"></textarea>
+        <button type="button" class="w-100 btn mb-5 btn-outline-dark" (click)="createFeedback()">Оставить отзыв</button>
+    </div>
+    <div *ngIf="feedbacks && feedbacks.length == 0">
+        <p>Пока что нет отзывов</p>
+    </div>
+    <div class="card mb-3" *ngFor="let feedback of feedbacks"> 
+        <div class="card-body">
+            <h5 class="card-title">{{feedback.client.name}}</h5>
+            <hr>
+            <p class="card-text">{{feedback.text}}</p>
+            <button *ngIf="user && user.roles[0].id == 1" type="button" class="w-100 btn btn-outline-dark" (click)="deleteFeedback(feedback.id)">Удалить отзыв</button>
+        </div>
+    </div>
+</div>

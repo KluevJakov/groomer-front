@@ -1,0 +1,46 @@
+<div class="container h-100 d-flex flex-column">
+    <div class="mb-5 d-flex flex-row">
+        <div class="d-flex flex-column pt-5 mt-2 menu">
+            <button type="button" class="menubtn btn btn-secondary mb-1" (click)="lk()">Запись на прием</button>
+            <button type="button" class="menubtn btn btn-secondary mb-1" (click)="feedback()">Отзывы</button>
+            <button type="button" class="menubtn btn btn-secondary mb-1" (click)="about()">О нас</button>
+            <button type="button" class="menubtn btn btn-secondary mb-1" (click)="actions()">Акции</button>
+            <button *ngIf="user" type="button" class="menubtn btn btn-secondary mb-1" (click)="exit()">Выход</button>
+        </div>
+        <div class="d-flex">
+            <img src="assets/img/snoopy.png" width="140px" height="210px" class="justify-self-end align-self-end">
+            <img src="assets/img/lapi.png" width="300px" height="300px" class="justify-self-center align-self-center" style="margin-left: 150px;">
+        </div>
+    </div>
+    <div class="mb-5 w-75 d-flex align-self-center flex-column">
+        <div class="mb-3">
+            <h2>Добро пожаловать в студию красоты для ваших питомцев!</h2>
+            Мы предлагаем профессиональные услуги груминга, специализируясь на уходе за питомцами всех пород и размеров.
+        </div>
+        <div class="mb-3">
+            В нашей команде работают опытные грумеры, которые заботятся о здоровье и красоте ваших питомцев. Мы понимаем, что
+            каждый питомец уникален и требует индивидуального подхода.
+        </div>
+        <div>
+            Наша цель - сделать процесс груминга максимально комфортным и безопасным для вашего питомца.
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly mb-5">
+        <div class="newsItem">
+            <img src="assets/img/r1.png" class="previewImage mb-2">
+            <p>В продаже появился новый шампунь для собак.</p>
+        </div>
+        <div class="newsItem">
+            <img src="assets/img/r2.png" class="previewImage mb-2">
+            <p>Дорогие клиенты, начался сезон клещей. Будьте осторожны.</p>
+        </div>
+        <div class="newsItem">
+            <img src="assets/img/r3.png" class="previewImage mb-2">
+            <p>Наши партнёры предлагают скидку на ряд кормов для собак.</p>
+        </div>
+        <div class="newsItem">
+            <img src="assets/img/r4.png" class="previewImage mb-2">
+            <p>Почему важно следить за состоянием когтей своего питомца.</p>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+    
+}
+
+body {
+    height: 100%;
+    background-color: #EFEEE9;
+}
+
+.headerBg {
+    background-color: #e7e6df;
+}
+.menubtn {
+    border-radius: 20px;
+}
+
+.previewImage {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.newsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align:justify;
+    width: 200px;
+    height: 250px;
+    padding-inline: 10px;
+    background: #e7e6df;
+}
+
+.menu {
+    width: 250px; 
+    height: 400px;
+    background: #e7e6df;
+    padding: 15px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: rgb(158, 157, 157);
+}
+
+.linkMenu {
+    font-size: 25px;
+}
